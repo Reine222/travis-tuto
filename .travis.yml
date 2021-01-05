@@ -1,4 +1,6 @@
+
 language: python
+
 python:
     - "3.7"
 env:
@@ -9,5 +11,6 @@ install:
     - pipenv install
 
 script:
-    #-  coverage run --source='blog' manage.py test && coverage report && coverage html
-    - python manage.py test
+    -  coverage run --source='blog' manage.py test && coverage report && coverage html
+after_success:
+    - coveralls
