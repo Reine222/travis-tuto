@@ -11,6 +11,6 @@ install:
     - pipenv install
 
 script:
-    -  coverage run --source='blog' manage.py test && coverage report && coverage html
+    -  coverage run --source='projet' manage.py test && coverage report && coverage html
 after_success:
     - coveralls
